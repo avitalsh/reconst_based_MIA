@@ -54,15 +54,13 @@ def run_dataset(opt, model, wide_resnet, dataset, num_gen, res_dir):
             plt.savefig(os.path.join(res_dir, '{}.png'.format(name)))
             plt.close()
 
-    scores['gt_reconst'] = gt_reconst
-    scores['pred_error'] = pred_error
 
 
     return np.array(gt_reconst), np.array(pred_error)
 
 if __name__ == '__main__':
     opt = TestOptions().parse(save=False)
-    opt.nThreads = 0#1   # test code only supports nThreads = 1
+    opt.nThreads = 1   # test code only supports nThreads = 1
     opt.batchSize = 1  # test code only supports batchSize = 1
     opt.serial_batches = False  # shuffle
     opt.no_flip = True  # no flip
