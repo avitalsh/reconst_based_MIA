@@ -5,6 +5,10 @@
 > International Conference on Computer Vision (ICCV), 2021.
 
 
+<p align='center'>  
+  <img src='imgs/method.png' width='1000'/>
+</p>
+
 
 ## Usage
 The current software is tested with Pytorch 1.6.0 and Python 3.6.
